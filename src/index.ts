@@ -6,7 +6,7 @@ import { Engine, Scene, ArcRotateCamera, Vector3, HemisphericLight, Mesh, MeshBu
 class App {
     constructor() {
         // create the canvas html element and attach it to the webpage
-        var canvas = document.createElement("canvas");
+        var canvas = document.getElementById('renderCanvas') as HTMLCanvasElement;
         canvas.style.width = "100%";
         canvas.style.height = "100%";
         canvas.id = "gameCanvas";
@@ -24,7 +24,7 @@ class App {
         // hide/show the Inspector
         window.addEventListener("keydown", (ev) => {
             // Shift+Ctrl+Alt+I
-            if (ev.shiftKey && ev.ctrlKey && ev.altKey && ev.key === 'i') {
+            if (ev.key === 'i') {
                 if (scene.debugLayer.isVisible()) {
                     scene.debugLayer.hide();
                 } else {
