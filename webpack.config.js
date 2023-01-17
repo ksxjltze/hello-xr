@@ -7,6 +7,7 @@ module.exports = {
     entry: path.resolve(appDirectory, "src/index.ts"), //path to the main .ts file
     output: {
         filename: "js/bundleName.js", //name for the js file that is created/compiled in memory
+        path: path.resolve(appDirectory, 'dist'),
         clean: true,
     },
     resolve: {
@@ -37,4 +38,5 @@ module.exports = {
         })
     ],
     mode: "development",
+    devtool: 'inline-source-map'
 };
