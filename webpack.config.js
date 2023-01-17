@@ -34,7 +34,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             inject: true,
-            template: path.resolve(appDirectory, "public/index.html"),
+            template: path.resolve(appDirectory, "src/index.html"),
         })
     ],
     mode: "development",
